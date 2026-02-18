@@ -21,6 +21,12 @@ section{
   scroll-margin-top: 84px;
 }
 
+/* Also apply to explicit anchors like #projects */
+.anchor{
+  scroll-margin-top: 84px;
+  height: 0;
+}
+
 /* Skip link */
 .skip-link{
   position: absolute;
@@ -41,7 +47,7 @@ section{
   border-bottom: 1px solid var(--border);
 }
 
-/* General spacing */
+/* Section spacing */
 .section-pad{ padding: 72px 0; }
 
 .section-alt{
@@ -50,11 +56,16 @@ section{
   border-bottom: 1px solid var(--border);
 }
 
-/* Hero (tightened so About is closer) */
+/* ✅ Remove extra space between hero and About */
 .hero{
   padding: 56px 0 18px;
 }
 
+.section-tight-top{
+  padding-top: 26px;
+}
+
+/* Hero */
 .hero-lead{
   max-width: 820px;
 }
@@ -68,12 +79,7 @@ section{
   filter: drop-shadow(0 12px 22px rgba(0,0,0,.08));
 }
 
-/* Pull the About section up closer to the hero */
-.section-tight-top{
-  padding-top: 26px;
-}
-
-/* Bigger About photo */
+/* About photo */
 .about-photo{
   width: 220px;
   height: 220px;
@@ -133,7 +139,7 @@ section{
 .project-bullets li{ margin-bottom: 8px; }
 .project-bullets li:last-child{ margin-bottom: 0; }
 
-/* Media frame (consistent image sizing for ALL project images) */
+/* Media frame (same size images) */
 .media-frame{
   border-radius: 20px;
   overflow: hidden;
@@ -151,18 +157,6 @@ section{
   object-fit: cover;
 }
 
-/* Clickable video card look */
-.media-card{
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.media-inner{
-  text-align: center;
-  padding: 18px;
-}
-
 /* Footer */
 .footer{
   padding: 26px 0 36px;
@@ -173,16 +167,12 @@ section{
   .section-pad{ padding: 56px 0; }
   .hero{ padding: 44px 0 14px; }
   section{ scroll-margin-top: 92px; }
+  .anchor{ scroll-margin-top: 92px; }
 
-  .section-tight-top{
-    padding-top: 18px;
-  }
+  .section-tight-top{ padding-top: 18px; }
 
   .about-photo{
     width: 190px;
     height: 190px;
-  }
-  .media-card{
-    min-height: 260px;
   }
 }
