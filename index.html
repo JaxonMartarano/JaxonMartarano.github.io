@@ -305,6 +305,13 @@
                   loading="lazy"
                 />
               </div>
+
+              <div class="d-flex justify-content-center justify-content-lg-start mt-3">
+                <a class="btn btn-dark" target="_blank" rel="noreferrer"
+                   href="https://www.roblox.com/games/90781199568673/CozyVille">
+                  Play Game
+                </a>
+              </div>
             </div>
 
             <div class="col-12 col-lg-6">
@@ -366,10 +373,17 @@
                 </a>
               </div>
 
-              <div>
+              <div class="mb-2">
                 <span class="text-muted">GitHub:</span>
                 <a class="link-dark fw-semibold" href="https://github.com/JaxonMartarano" target="_blank" rel="noreferrer">
                   github.com/JaxonMartarano
+                </a>
+              </div>
+
+              <div>
+                <span class="text-muted">Resume:</span>
+                <a class="link-dark fw-semibold" href="https://drive.google.com/file/d/1RzKggQ3Ke1NIHfsx1AY19Vgmj9UrXhi7/view?usp=sharing" target="_blank" rel="noreferrer">
+                  View Resume
                 </a>
               </div>
             </div>
@@ -384,7 +398,7 @@
   <footer class="footer">
     <div class="container text-center">
       <div class="small text-muted">
-        © <span id="year"></span> Jaxon Martarano
+      <span id="year"></span> Jaxon Martarano
       </div>
     </div>
   </footer>
@@ -396,14 +410,11 @@
     defer
   ></script>
 
-  <!-- ✅ Bulletproof anchor scrolling + mobile menu close -->
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      // Footer year
       const el = document.getElementById("year");
       if (el) el.textContent = new Date().getFullYear();
 
-      // Smooth scroll that ALWAYS works (even if scrollspy/smooth-scroll misbehaves)
       const nav = document.getElementById("siteNav");
       const navLinks = document.querySelectorAll('#siteNav a.nav-link[href^="#"], a.btn[href^="#"]');
 
@@ -418,10 +429,8 @@
           e.preventDefault();
           target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-          // Update URL hash without jumping
           history.pushState(null, "", href);
 
-          // Close mobile nav if open
           const navLinksEl = document.getElementById("navLinks");
           if (navLinksEl && navLinksEl.classList.contains("show") && window.bootstrap?.Collapse) {
             const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(navLinksEl);
